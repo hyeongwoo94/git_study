@@ -69,7 +69,6 @@ h1 {
 .sub_text {
     font-size: 1.5rem;
     line-height: 2rem;
-    padding: 1rem;
     color: #707070;
 }
 
@@ -90,4 +89,10 @@ h1 {
     display: block;
     max-width: 500px;
     width: 100%;
+}
+
+.box_line {
+    margin: 1rem auto;
+    border: solid 1px #707070;
+    padding: 1rem;
 }
