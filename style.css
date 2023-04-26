@@ -2,3 +2,40 @@
     margin: 0;
     padding: 0;
 }
+
+html,
+body {
+    font-size: 62.5%;
+    line-height: 1.285;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.wrap {
+    padding: 2rem;
+}
+
+.wrap_layout {
+    display: grid;
+}
+
+.title {
+    margin: 2rem;
+}
+
+.title>li {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.text>li {
+    font-size: 1.5rem;
+}
+
+.sub_text {
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}
