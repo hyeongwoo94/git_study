@@ -9,6 +9,15 @@ body {
     line-height: 1.285;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: coral;
+}
+
 h1 {
     font-size: 2.5rem;
 }
@@ -19,7 +28,17 @@ h1 {
 
 .wrap_layout {
     display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: start;
+    justify-items: center;
+    gap: 2%;
 }
+
+.wrap_layout>div:nth-child(1) {}
+
+.wrap_layout>div:nth-child(2) {}
+
+.wrap_layout>div:nth-child(3) {}
 
 .title {
     margin: 2rem;
@@ -31,6 +50,10 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.text {
+    margin-top: 20px;
+}
+
 .text>li {
     font-size: 1.5rem;
 }
@@ -38,4 +61,23 @@ h1 {
 .sub_text {
     padding-left: 2rem;
     font-size: 1.3rem;
+}
+
+.img_list {
+    list-style: none;
+}
+
+.img_list>li {
+    margin-bottom: 30px;
+}
+
+.img_list>li>h2 {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.img_list>li>img {
+    display: block;
+    max-width: 500px;
+    width: 100%;
 }
