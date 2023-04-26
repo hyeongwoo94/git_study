@@ -122,10 +122,32 @@
             <div>
                 <ol class="title">
                     <li>
-                        에디터 부가기능
-                        <p class="sub_text">
-                            git graph
-                        </p>
+                        merge하는 방법 3가지
+                        <ul>
+                            <li>
+                                가장 일방적인 방법 merge = 3-way merge
+                                <p class="sub_text">
+                                    메인브런치와 서브브런치 둘다 commit를 한다음 merge 할때
+                                </p>
+                                <p class="sub_text">
+                                    __<br>
+                                    __<br>
+                                    선이 두개로 나뉘어서 합쳐짐
+                                </p>
+                            </li>
+                            <li>
+                                fast-foward merge
+                                <p class="sub_text">
+                                    메인 브런치에는 commit없고 서브 브런치에만 commit이 있을 경우
+                                </p>
+                                <p class="sub_text">
+                                    merge할경우 자동으로됨, 서브브런치의 이름이 메인브런치로 바뀜
+                                </p>
+                                <p class="sub_text">
+                                    강제로 3-way merge하는 방법 git merge --no-ff
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ol>
             </div>
