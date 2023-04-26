@@ -74,6 +74,15 @@
                                     git graph
                                 </p>
                             </li>
+                            <li>
+                                브런치 삭제 방법
+                                <p class="sub_test">
+                                    git branch -d 서브 브런치 이름 => marge한 브런치
+                                </p>
+                                <p class="sub_test">
+                                    git branch -D 서브 브런치 이름 => marge 안한 브런치
+                                </p>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -161,8 +170,8 @@
                             <li>
                                 rebase
                                 <p class="sub_text">
-                                    fast-foward merge 일경우 로그를 확인하면 서브브런치의 내용까지 나온다.<br>
-                                    간단한 브런치의 로그내용을 없앨 수가 있다.
+                                    3-way merge 일경우 로그를 확인하면 서브브런치의 내용까지 나온다.<br>
+                                    간단한 브런치의 로그내용을 없앨 수가 있다. 쉽게 말해 fast-forward merge
                                 </p>
                                 <p class="sub_text">
                                     뒤로 갈수록 복잡해지는 marge 경로를 좀더 단순하게 표현해준다.(결국 view 문제)
@@ -179,7 +188,10 @@
                             <li>
                                 squah and merge
                                 <p class="sub_text">
-
+                                    서브 브런치의 commit 내용들을 메인 브런치로 commit 순간이동 해준다.
+                                </p>
+                                <p class="sub_text">
+                                    메인브런치에서 git merge --squash 서브브런치이름33
                                 </p>
                             </li>
                         </ul>
