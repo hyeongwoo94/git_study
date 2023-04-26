@@ -122,7 +122,7 @@
             <div>
                 <ol class="title">
                     <li>
-                        merge하는 방법 3가지
+                        merge작동원리
                         <ul>
                             <li>
                                 가장 일방적인 방법 merge = 3-way merge
@@ -145,6 +145,41 @@
                                 </p>
                                 <p class="sub_text">
                                     강제로 3-way merge하는 방법 git merge --no-ff
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        merge 하는 3가지
+                        <ul>
+                            <li>
+                                일방적인 merge
+                                <p class="sub_text">
+                                    메인 브런치로 switch해서 marge 해야함
+                                </p>
+                            </li>
+                            <li>
+                                rebase
+                                <p class="sub_text">
+                                    fast-foward merge 일경우 로그를 확인하면 서브브런치의 내용까지 나온다.<br>
+                                    간단한 브런치의 로그내용을 없앨 수가 있다.
+                                </p>
+                                <p class="sub_text">
+                                    뒤로 갈수록 복잡해지는 marge 경로를 좀더 단순하게 표현해준다.(결국 view 문제)
+                                </p>
+                                <p class="sub_text">
+                                    [실행방법] <br>
+                                    git switch 새로운브랜치 >> git rebase main<br>
+                                    git switch main >> git merge 새로운브랜치
+                                </p>
+                                <p class="sub_text">
+                                    conflict가 많이 발생한다.--333
+                                </p>
+                            </li>
+                            <li>
+                                squah and merge
+                                <p class="sub_text">
+
                                 </p>
                             </li>
                         </ul>
