@@ -39,7 +39,9 @@ h1 {
     gap: 2%;
 }
 
-.wrap_layout>div:nth-child(1) {}
+.wrap_layout>div:nth-child(1) {
+    grid-row: span 2;
+}
 
 .wrap_layout>div:nth-child(2) {}
 
