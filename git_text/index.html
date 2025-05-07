@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>git 사용법</title>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <h1>
+                Git
+                <a href="https://codingapple.com/"
+                    >강의:https://codingapple.com/</a
+                >
+            </h1>
+            <div class="wrap_layout">
+                <div>
+                    <ol class="title">
+                        <li>
+                            왜사용하는가?
+                            <ul class="text">
+                                <li>이전 코드로 되돌아가기</li>
+                                <li>과거 작업내용 열람가능</li>
+                            </ul>
+                        </li>
+                        <li>
+                            용어
+                            <ul class="text">
+                                <li>git init: git 시작</li>
+                                <li>
+                                    git add: 업로드
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            git add 파일명 or git add 파일명
+                                            파일명
+                                        </p>
+                                        <p class="sub_text">
+                                            git add . == 전체 파일 업로드
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>git commit -m '메모'</li>
+                                <li>git restore: 스테이징된 파일 취소</li>
+                                <li>
+                                    git log : add, commit 내용 보여줌
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            HEAD는 현재 내가 있는 곳의 위치를
+                                            말해주는것
+                                        </p>
+                                        <p class="sub_text">
+                                            git log --graph --oneline --all
+                                            ==>로그가 이쁘게 한줄로 나옴
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>git status : 힘들때 외치는것</li>
+                                <li>
+                                    git diff :commit 하기 이전에 저장된것과 현재
+                                    코드의 차이점을 보여줌
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            사용하지마셈 구데기임, 정료는 q연태
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>git difftool : diff 보다 보기좋게 나옴</li>
+                                <li>
+                                    에디터 부가기능
+                                    <div class="box_line">
+                                        <p class="sub_text">git graph</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    git restore 파일명
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            해당 파일이 가장 최근의 commit한
+                                            상태로 돌아감
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    git restore --source 커밋아이디 파일명
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            해당 파일이 해당 커밋아이디 시점의
+                                            상태로 돌아감
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    git restore --staged 파일명
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            해당 파일의 staging을 취소한다. ==
+                                            git add 한상태를 취소한다고
+                                            생각하며됨
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    commit 삭제는 불가능, 해당 commit 작업내용을
+                                    취소하는 commit을 생성
+                                </li>
+                                <li>
+                                    git revert 커밋아이디 (커밋아이디 여러개
+                                    작성가능)
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            해당 커밋아이디의 작업내용이
+                                            취소되고<br />
+                                            취소 되엇다는 commit이생성됨
+                                        </p>
+                                        <p class="sub_text">
+                                            터미널에서 열릴겅우 i로 텍스트
+                                            입력가능 > esc누르고 > :wq입력
+                                            저장후 나가진다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    git revert HEAD
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            방금 생성한 commit 취소(marge
+                                            revert도 가능)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    git reset
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            git reset --hard 커밋아이디 : 해당
+                                            아이디로 과거이동<br />
+                                            (해당 아이디와 현재 작업까지의
+                                            commit 전부 사라진다.)
+                                        </p>
+                                        <p class="sub_text">
+                                            git reset --soft 커밋아이디 : 해당
+                                            커밋아이디까지의 모든 commit
+                                            staging인상태로 이동
+                                        </p>
+                                        <p class="sub_text">
+                                            git reset --mixed 커밋아이디 : 해당
+                                            커밋아이디까지의 모든 git add 이전
+                                            상태로 이동
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    터미널 텍스트 추가 or 나가기
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            i를 누르면 수정할수 있는 모드로 변경
+                                        </p>
+                                        <p class="sub_text">나갈때 qq</p>
+                                        <p class="sub_text">
+                                            esc 누르고 :wq입력
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    브런치 삭제 방법
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            git branch -d 서브 브런치 이름 =>
+                                            marge한 브런치
+                                        </p>
+                                        <p class="sub_text">
+                                            git branch -D 서브 브런치 이름 =>
+                                            marge 안한 브런치
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            branch 만드는법
+                            <div class="box_line">
+                                <p class="sub_text">
+                                    새로운 기능을 추가할때 원본에서 작업하기
+                                    부담스러울때
+                                </p>
+                                <p class="sub_text">
+                                    복사본을 만들어서 원본은 그대로 두고
+                                    실험해볼때 유용,협업할때 유용
+                                </p>
+                            </div>
+                            <ul class="text">
+                                <li>
+                                    1. git branch 브랜치이름(내가 지정하는
+                                    것이다.)
+                                </li>
+                                <li>
+                                    2. git switch 브랜치이름
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            내가 복사한 브랜치로 이동
+                                        </p>
+                                        <p class="sub_text">
+                                            원본으로 돌아가고 싶으면 git switch
+                                            (main or master)
+                                        </p>
+                                        <p class="sub_text">
+                                            내가 어디있는지 까먹엇다. 그럼 외쳐
+                                            상태창!!
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    3.git merge 브랜치이름
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            브랜치를 합치고 싶다면 git switch
+                                            master(원본)으로 되돌아가서
+                                        </p>
+                                        <p class="sub_text">
+                                            git merge 브랜치이름을 입력하면
+                                            합쳐짐
+                                        </p>
+                                        <p class="sub_text">
+                                            브랜치 합칠 때 conflict가 발생하면
+                                            파일열어서 수정하고 git add, git
+                                            commit 하기
+                                        </p>
+                                        <p class="sub_text">
+                                            <<<< />>>> / ==== 이런 쓸데없는
+                                            것들은 다 지우고 원하는 코드만
+                                            남기면 됩니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <ol class="title">
+                        <li>
+                            merge작동원리
+                            <ul class="text">
+                                <li>
+                                    가장 일방적인 방법 merge = 3-way merge
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            메인브런치와 서브브런치 둘다
+                                            commit를 한다음 merge 할때
+                                        </p>
+                                        <p class="sub_text">
+                                            선이 두개로 나뉘어서 합쳐짐
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    fast-foward merge
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            메인 브런치에는 commit없고 서브
+                                            브런치에만 commit이 있을 경우
+                                        </p>
+                                        <p class="sub_text">
+                                            merge할경우 자동으로됨, 서브브런치의
+                                            이름이 메인브런치로 바뀜
+                                        </p>
+                                        <p class="sub_text">
+                                            강제로 3-way merge하는 방법 git
+                                            merge --no-ff
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            merge 하는 3가지
+                            <ul class="text">
+                                <li>
+                                    일반적인 merge
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            메인 브런치로 switch해서 marge
+                                            해야함
+                                        </p>
+                                        <p class="sub_text">
+                                            git merge 서브브런치이름
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    rebase
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            3-way merge 일경우 로그를 확인하면
+                                            서브브런치의 내용까지 나온다.<br />
+                                            간단한 브런치의 로그내용을 없앨 수가
+                                            있다. 쉽게 말해 fast-forward merge
+                                        </p>
+                                        <p class="sub_text">
+                                            뒤로 갈수록 복잡해지는 marge 경로를
+                                            좀더 단순하게 표현해준다.(결국 view
+                                            문제)
+                                        </p>
+                                        <p class="sub_text">
+                                            [실행방법] <br />
+                                            git switch 새로운브랜치 >> git
+                                            rebase main<br />
+                                            git switch main >> git merge
+                                            새로운브랜치
+                                        </p>
+                                        <p class="sub_text">
+                                            conflict가 많이 발생한다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    squah and merge
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            서브 브런치의 commit 내용들을 메인
+                                            브런치로 commit 순간이동 해준다.
+                                        </p>
+                                        <p class="sub_text">
+                                            메인브런치에서 git merge --squash
+                                            서브브런치이름33
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <ul class="img_list">
+                        <li>
+                            <h2>일반 merage</h2>
+                            <img src="./img/3way-merge.png" alt="" />
+                        </li>
+                        <li>
+                            <h2>fast-fowrward merage</h2>
+                            <img src="./img/fast-fowrward.png" alt="" />
+                        </li>
+                        <li>
+                            <h2>rebase merage</h2>
+                            <img src="./img/rebase.png" alt="" />
+                        </li>
+                        <li>
+                            <h2>squash merage</h2>
+                            <img src="./img/squash.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    git push /pull
+                    <div class="box_line">
+                        <p class="sub_text">1. git.hub들어가기</p>
+                        <p class="sub_text">오른쪽 상단 new repsitory 클릭</p>
+                        <p class="sub_text">
+                            저장소 이름 지정해주기 그리고 배포
+                        </p>
+                        <p class="sub_text">
+                            git.hub는 메인브랜치를 꼭 main으로 하라고
+                            명시한다.<br />
+                            git branch -M main
+                        </p>
+                        <p class="sub_text">
+                            git push 어쩌구.git<br />
+                            새로 만든 온라인 저장소에 현재까지 한 코드를 업로드
+                            됨
+                        </p>
+                        <p class="sub_text">
+                            매번 긴주소로 push 하기 귀찮음<br />
+                            git remote add 변수명 주소해줌<br />
+                            git remote add origin 주소.git<br />
+                            git remote add -u origin main
+                        </p>
+                        <p class="sub_text"></p>
+                        <p class="sub_text"></p>
+                        <p class="sub_text"></p>
+                        <p class="sub_text"></p>
+                    </div>
+                </div>
+                <div>
+                    <ol class="title">
+                        <li>
+                            브랜치로 협업하기
+                            <ul class="text">
+                                <li>
+                                    로컬에서 브랜치만들고 업로드
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            git branch 브랜치이름<br />
+                                            git switch 브랜치이름<br />
+                                            add . => commit<br />
+                                            git push origin 브랜치이름<br />
+                                            브랜치 이름을 안적으면 모든 브랜치가
+                                            다 업로드 됨
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    Pull request 하기
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            협업하기 전에 대부분 코드리뷰/검토를
+                                            한다.
+                                        </p>
+                                        <p class="sub_text">
+                                            git.hub사이트에서 pull requests 클릭
+                                        </p>
+                                        <p class="sub_text">
+                                            merge 하기 >> 세가지방법이 있음<br />
+                                            rebase and merge 하면 개꿀
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    브랜치 전략(git flow)
+                                    <div class="box_line">
+                                        <p class="sub_text">
+                                            브랜치 main<br />
+                                            말그대로 원본
+                                        </p>
+                                        <p class="sub_text">
+                                            브랜치 develop<br />
+                                            main의 복사본<br />
+                                            실질적으로 여기서 개발하지
+                                            않느다.<br />
+                                        </p>
+                                        <p class="sub_text">
+                                            브랜치 feature<br />
+                                            develop의 복사본<br />
+                                            실질적 개발은 여기서 이루어진다.<br />
+                                            브랜치 이름을 feature/friend,
+                                            feature/food 이런식으로 작성<br />
+                                            feature/friend가 완료되면 develop와
+                                            merge<br />
+                                            브랜치 feature/friedn안에
+                                            브랜치feature/food를 만들고 개발<br />
+                                            feature/food를 develop에 merge
+                                        </p>
+                                        <p class="sub_text">
+                                            브랜치 release<br />
+                                            feature에서 개발 후 develop에
+                                            merge했으니 main에 바로 merge?<br />
+                                            상남자라면 가능!!!하지만 우리는
+                                            쫄보니깐 한번도 체크하자<br />
+                                            개발완성되어 merge한 develop를
+                                            한번더 브랜치 relase로 복사후<br />
+                                            수정할꺼 하고 그다음에 main과
+                                            merge하면 끝!!
+                                        </p>
+                                        <p class="sub_text">
+                                            브랜치 hotfix<br />
+                                            첫번째 업데이트후 급한 버그가 생겼을
+                                            때 main를 브랜치 hotfix로 복사해서
+                                            버그 수정하기<br />
+                                            바로 main에 merge 하고 develop에도
+                                            merge 해주기
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div>123</div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>
