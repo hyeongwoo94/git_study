@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'REVONZA';
+    src: url('REVONZA.woff2') format('woff2'),
+        url('REVONZA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

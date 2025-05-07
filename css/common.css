@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* 기본 설정들 */
+html {
+    overflow-x: hidden;
+}
+
+html * {
+    word-break: keep-all;
+}
+
+html,
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+img,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* 기본 설정들 */
+
+:root {
+    --maincolor: #eaa150;
+    --black: #303030;
+    --score: "S-Core Dream";
+    --pret: "Pretendard";
+}
+
+.none_768 {
+    display: block;
+}
+.block_768 {
+    display: none;
+}
+.bold {
+    font-size: 700;
+}
+/* 영어일때 폰트 변경 */
+
+.en .main_se_1 .info {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+}
+.en .my_history ._text_box .text_box a:before {
+    display: none;
+}
+
+.en .main_se_2 ._cont_1 ._right h3 {
+    font-family: "Fredericka the Great", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.en .main_se_2 ._cont_1 ._right .mbti p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.en .my_history ._list > ul li {
+    font-size: 16px;
+}
+.en .my_history ._text_box .ver_text {
+    display: none;
+}
+.en .my_history ._text_box h5 {
+    font-size: 24px;
+}
+.en .my_history ._text_box h6 {
+    font-size: 14px;
+}
+.en .go_notion a {
+    font-size: 34px;
+}
+.en .popo_link a {
+    font-size: 18px;
+}
+.en .main_se_2 ._cont_1 ._left h4 {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+@media screen and (max-width: 1680px) {
+    .en .go_notion a {
+        font-size: 24px;
+    }
+    .en .my_history ._text_box .text_box p {
+        font-size: 10px;
+    }
+    .en .my_history ._text_box .text_box h4 {
+        font-size: 14px;
+    }
+    .en .my_history ._list h2 {
+        font-size: 20px;
+    }
+    .en .main_se_2 ._cont_1 ._right h3 {
+        font-size: 16px;
+    }
+    .en .main_se_2 ._cont_1 ._right .mbti p,
+    .en .main_se_2 ._cont_1 ._right .ads p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .en .main_se_2 ._cont_1 ._left h4 {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .en .main_se_1 .btn_box a p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .none_768 {
+        display: none;
+    }
+    .block_768 {
+        display: block;
+    }
+    .en .my_history ._text_box {
+        display: none;
+    }
+    .en .my_history ._list {
+        width: 100%;
+    }
+}
+@font-face {
+    font-family: "DOSMyungjo";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+/* 제목 */
+@font-face {
+    font-family: "OKCHAN";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKCHAN.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+/* 본문 */
+@font-face {
+    font-family: "SBAggroL";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff")
+        format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SBAggroB";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+        format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Chosunilbo_myungjo";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}

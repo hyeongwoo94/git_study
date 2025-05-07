@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-text-size-adjust : none; /* 크롬, 사파리, 오페라 신버전 / */
+	-ms-text-size-adjust : none; /* / IE / */
+	-moz-text-size-adjust : none; /* / 파이어폭스 / */
+	-o-text-size-adjust : none; /* / 오페라 구버전 / */
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {text-decoration:none; color: inherit;}
+
+input, textarea, button , select {
+	appearance: none;
+	border-radius: 0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	outline: 0;
+}
+
+input[type='radio']{
+	appearance: none;
+}
+
+/* ios 기본 스타일 제거 */
+input{
+	/*ios대응*/
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+/* 기본 체크박스 숨기기 */
+.form_checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form_checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+/* 체크 표시를 위한 커스텀 스타일 */
+.form_checkbox .checkmark {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: #eee;
+border-radius: 4px;
+}
+
+/* 체크박스가 선택되었을 때의 스타일 */
+.form_checkbox input[type="checkbox"]:checked + .checkmark {
+background-color: #4CAF50;
+border: none;
+}
+
+/* 체크 표시 */
+.form_checkbox .checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* 체크박스가 선택되었을 때 체크 표시 보여주기 */
+.form_checkbox input[type="checkbox"]:checked + .checkmark:after {
+display: block;
+}
+
+/* 체크 표시의 스타일 */
+.form_checkbox .checkmark:after {
+left: 7px;
+top: 3px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+  
+
+select{
+	/*ios대응*/
+	-webkit-appearance: none;
+	-moz-appearance: none; 
+	appearance: none;
+
+	/*화살표 배경 넣기*/
+	background: url('이미지경로') no-repeat 98% 50% #fff; /*화살표 select박스 오른쪽 중앙 배치,배경 흰색*/
+}
+select::-ms-expand{ 
+	display:none; /* 화살표 없애기 for IE10, 11*/
+}
+.none_768{
+    display: block;
+}
+.block_768{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .none_768{
+        display: none;
+    }
+    .block_768{
+        display: block;
+    }
+}

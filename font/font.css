@@ -1,0 +1,170 @@
+@import "./REVONZA/stylesheet.css";
+/* font-family: 'REVONZA'; */
+@import "./aAccountantSignature/stylesheet.css";
+/* font-family: 'a Accountant Signature'; */
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+/* Pretendard */
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    font-display: swap;
+    src: local("Pretendard Black"),
+        url("./Pretendard/Pretendard-Black.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    font-display: swap;
+    src: local("Pretendard ExtraBold"),
+        url("./Pretendard/Pretendard-ExtraBold.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),
+        url("./Pretendard/Pretendard-Bold.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),
+        url("./Pretendard/Pretendard-SemiBold.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: swap;
+    src: local("Pretendard Medium"),
+        url("./Pretendard/Pretendard-Medium.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),
+        url("./Pretendard/Pretendard-Regular.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    font-display: swap;
+    src: local("Pretendard Light"),
+        url("./Pretendard/Pretendard-Light.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    font-display: swap;
+    src: local("Pretendard ExtraLight"),
+        url("./Pretendard/Pretendard-ExtraLight.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    font-display: swap;
+    src: local("Pretendard Thin"),
+        url("./Pretendard/Pretendard-Thin.woff2") format("woff2"),
+        url("./Pretendard/Pretendard-Thin.woff") format("woff");
+}
+
+/* -core_dream */
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 900;
+    font-display: swap;
+    src: local("에스코어 드림 9 Black"),
+        url("./S-Core_Dream/SCDream9.otf") format("opentype");
+}
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 800;
+    font-display: swap;
+    src: local("에스코어 드림 8 Heavy"),
+        url("./S-Core_Dream/SCDream8.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 700;
+    font-display: swap;
+    src: local("에스코어 드림 7 ExtraBold"),
+        url("./S-Core_Dream/SCDream7.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 600;
+    font-display: swap;
+    src: local("에스코어 드림 6 Bold"),
+        url("./S-Core_Dream/SCDream6.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 500;
+    font-display: swap;
+    src: local("에스코어 드림 4 Medium"),
+        url("./S-Core_Dream/SCDream5.otf") format("opentype");
+}
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 400;
+    font-display: swap;
+    src: local("에스코어 드림 4 Regular"),
+        url("./S-Core_Dream/SCDream4.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 300;
+    font-display: swap;
+    src: local("에스코어 드림 3 Light"),
+        url("./S-Core_Dream/SCDream3.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 200;
+    font-display: swap;
+    src: local("에스코어 드림 2 ExtraLight"),
+        url("./S-Core_Dream/SCDream2.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "S-Core Dream";
+    font-weight: 100;
+    font-display: swap;
+    src: local("에스코어 드림 1 Thin"),
+        url("./S-Core_Dream/SCDream1.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "HARRYP";
+    font-weight: 100;
+    font-display: swap;
+    src: local("해리포터"), url("./HARRYP.TTF") format("opentype");
+}
